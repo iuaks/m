@@ -5,7 +5,7 @@
 #include "Teacher.h"
 
 int main() {
-    Student s1("Maksim", 16, "S001");
+    Student s1("Maksi", 16, "S001");
     Student s2 = s1;
     Student s3 = std::move(s2);
 
