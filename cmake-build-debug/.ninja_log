@@ -1,0 +1,14 @@
+# ninja log v6
+7	865	7673855327605476	CMakeFiles/untitled1.dir/main.cpp.obj	86e50891308cffc5
+3	596	7673855621647590	build.ninja	b67ab3274c77b530
+868	1079	7673836068279999	untitled1.exe	b24dcd5695bdbb6
+96	779	7673833360963112	CMakeFiles/untitled1.dir/Course.cpp.obj	169df8861d7faeb2
+53	993	7673854896402645	CMakeFiles/untitled1.dir/student.cpp.obj	70f8e9f65fa4bf4b
+59	1139	7673854896462441	CMakeFiles/untitled1.dir/group.cpp.obj	34fbb6cb3c6032f9
+41	996	7673851457627425	CMakeFiles/untitled1.dir/person.cpp.obj	96036f1617a68827
+2	498	7673855621647590	build.ninja	b67ab3274c77b530
+41	994	7673855623343311	CMakeFiles/untitled1.dir/Teacher.cpp.obj	a5fabeece463775b
+36	1002	7673855623293474	CMakeFiles/untitled1.dir/Person.cpp.obj	3d85d438f476b0a9
+1002	1265	7673855632942964	untitled1.exe	bb59c9de9d173acb
+8	1017	7673855957421119	CMakeFiles/untitled1.dir/main.cpp.obj	86e50891308cffc5
+1017	1248	7673855967515225	untitled1.exe	bb59c9de9d173acb
