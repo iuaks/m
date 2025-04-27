@@ -2,23 +2,18 @@
 // Created by User on 31.03.2025.
 //
 
-#include "group.h"
-#include "student.h"
+#include "Group.h"
+#include <iostream>
 
-Group::Group() : groupName("Unknown") {}
-
-Group::Group(std::string name) : groupName(name) {}
+Group::Group(const std::string& name) : groupName(name) {}
 
 void Group::addStudent(const Student& student) {
     students.push_back(student);
 }
 
-std::string Group::getGroupName() const {
-    return groupName;
+void Group::showGroup() const {
+    std::cout << "Group: " << groupName << std::endl;
+    for (const auto& student : students) {
+        std::cout << student << std::endl;
+    }
 }
-
-std::vector<Student> Group::getStudents() const {
-    return students;
-}
-
-Group::~Group() {}

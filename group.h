@@ -13,14 +13,11 @@ class Group {
 private:
     std::string groupName;
     std::vector<Student> students;
+
 public:
-    Group();
-    Group(std::string name);
-
+    Group(const std::string& name);
     void addStudent(const Student& student);
-    std::string getGroupName() const;
-    std::vector<Student> getStudents() const;
-
-    ~Group();
+    void showGroup() const;
 };
+
 #endif //GROUP_H
