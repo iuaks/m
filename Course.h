@@ -1,7 +1,6 @@
 //
 // Created by User on 31.03.2025.
 //
-
 #ifndef COURSE_H
 #define COURSE_H
 

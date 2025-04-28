@@ -5,10 +5,11 @@
 #include "Group.h"
 
 int main() {
-    Student s1("Maksim", 16, "1");
+    Student s1("Maksim", 16, "L1");
     Student s2 = s1;
     Student s3 = std::move(s2);
 
+    std::cout << s1 << std::endl;
     std::cout << s1 << std::endl;
     std::cout << s3 << std::endl;
 
@@ -24,6 +25,7 @@ int main() {
     g1.showGroup();
 
     Student s4;
+    std::cout << "Enter new student:" << std::endl;
     std::cin >> s4;
     g1.addStudent(s4);
 

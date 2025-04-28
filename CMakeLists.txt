@@ -9,5 +9,4 @@ add_executable(untitled1
         Course.cpp
         group.cpp
         Person.cpp
-        Teacher.cpp
 )
