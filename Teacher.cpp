@@ -5,13 +5,21 @@
 #include "Teacher.h"
 
 Teacher::Teacher() : Person(), subject("Unknown") {}
-Teacher::Teacher(const std::string& n, int a, const std::string& s) : Person(n, a), subject(s) {}
-
-void Teacher::setSubject(const std::string& s) { subject = s; }
-std::string Teacher::getSubject() const { return subject; }
+Teacher::Teacher(const std::string& name, int age, const std::string& subject)
+    : Person(name, age), subject(subject) {}
 
 void Teacher::display() const {
-    Person::display();
-    std::cout << ", Subject: " << subject;
+    std::cout << "[Teacher] Name: " << name << ", Age: " << age << ", Subject: " << subject;
 }
 
+std::string Teacher::getRole() const {
+    return "Teacher";
+}
+
+void Teacher::sayHello() const {
+    std::cout << "Good day, I'm a teacher.\n";
+}
+
+void Teacher::printDetails() const {
+    std::cout << "Teacher [" << name << ", Age: " << age << ", Subject: " << subject << "]\n";
+}
