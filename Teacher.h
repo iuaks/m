@@ -4,7 +4,7 @@
 
 #ifndef TEACHER_H
 #define TEACHER_H
-#pragma once
+
 #include "Person.h"
 #include "Printable.h"
 

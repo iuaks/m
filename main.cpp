@@ -11,17 +11,17 @@ void printInfo(const Person& person) {
 
 int main() {
     Person* p1 = new Student("Maksym", 16, "S001");
-    Person* p2 = new Teacher("Ivan Ivanovych", 45, "Informatyka");
+    Person* p2 = new Teacher("Ivan Ivanovych", 45, "IT");
 
-    std::cout << "\n-- Dynamic Polymorphism via pointers --" << std::endl;
+    std::cout << "\n Dynamic Polymorphism via pointers " << std::endl;
     p1->display(); std::cout << std::endl;
     p2->display(); std::cout << std::endl;
 
-    std::cout << "\n-- Polymorphism via reference --" << std::endl;
+    std::cout << "\n Polymorphism via reference " << std::endl;
     printInfo(*p1);
     printInfo(*p2);
 
-    std::cout << "\n-- Interface usage --" << std::endl;
+    std::cout << "\n Interface usage " << std::endl;
     std::vector<Printable*> list;
     list.push_back(new Student("Olha", 18, "S002"));
     list.push_back(new Teacher("Mariia Ivanivna", 50, "Matematyka"));
@@ -31,7 +31,7 @@ int main() {
         delete p;
     }
 
-    std::cout << "\n-- Static binding problem --" << std::endl;
+    std::cout << "\n Static binding problem " << std::endl;
     Student p3("Inna", 20, "S003");
     p3.display();
 
@@ -39,4 +39,3 @@ int main() {
     delete p2;
     return 0;
 }
-пш
