@@ -7,7 +7,6 @@ add_executable(untitled1
         main.cpp
         student.cpp
         Course.cpp
-        group.cpp
         Person.cpp
         Teacher.cpp
 )

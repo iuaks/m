@@ -1,13 +1,10 @@
 # ninja log v6
-105	1238	7675219359789373	CMakeFiles/untitled1.dir/main.cpp.obj	86e50891308cffc5
-90	1517	7675219550606821	build.ninja	b67ab3274c77b530
-274	1213	7675181493552028	CMakeFiles/untitled1.dir/Teacher.cpp.obj	a5fabeece463775b
-926	1119	7675183483966715	untitled1.exe	bb59c9de9d173acb
+70	1210	7676384102982915	CMakeFiles/untitled1.dir/main.cpp.obj	86e50891308cffc5
+85	1136	7676384103137546	CMakeFiles/untitled1.dir/Teacher.cpp.obj	a5fabeece463775b
+3	1048	7676387847714442	build.ninja	b67ab3274c77b530
 110	1144	7675219359839200	CMakeFiles/untitled1.dir/Course.cpp.obj	169df8861d7faeb2
-53	993	7673854896402645	CMakeFiles/untitled1.dir/student.cpp.obj	70f8e9f65fa4bf4b
-223	1237	7674771897980023	CMakeFiles/untitled1.dir/group.cpp.obj	34fbb6cb3c6032f9
+32	225	7676386685362682	untitled1.exe	220803d5e824d9cb
+63	1104	7676381662214943	CMakeFiles/untitled1.dir/student.cpp.obj	70f8e9f65fa4bf4b
 41	996	7673851457627425	CMakeFiles/untitled1.dir/person.cpp.obj	96036f1617a68827
-36	1002	7673855623293474	CMakeFiles/untitled1.dir/Person.cpp.obj	3d85d438f476b0a9
-46	747	7675219550606821	build.ninja	b67ab3274c77b530
-36	952	7675219552470548	CMakeFiles/untitled1.dir/Teacher.cpp.obj	a5fabeece463775b
-953	1184	7675219561634438	untitled1.exe	bb59c9de9d173acb
+7	840	7676385812632804	CMakeFiles/untitled1.dir/group.cpp.obj	34fbb6cb3c6032f9
+77	1142	7676384103064584	CMakeFiles/untitled1.dir/Person.cpp.obj	3d85d438f476b0a9

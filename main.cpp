@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "Student.h"
 #include "Teacher.h"
@@ -33,10 +32,11 @@ int main() {
     }
 
     std::cout << "\n-- Static binding problem --" << std::endl;
-    Person p3 = Student("Inna", 20, "S003");
+    Student p3("Inna", 20, "S003");
     p3.display();
 
     delete p1;
     delete p2;
     return 0;
 }
+пш

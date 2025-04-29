@@ -7,7 +7,6 @@
 
 #include <string>
 #include <iostream>
-#include "Printable.h"
 
 class Person {
 protected:
@@ -23,7 +22,6 @@ public:
     virtual std::string getRole() const;
     virtual void sayHello() const = 0;
 };
-
 
 
 #endif //PERSON_H
