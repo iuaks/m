@@ -7,6 +7,7 @@
 
 #include <string>
 #include <iostream>
+#include "Printable.h"
 
 class Person {
 protected:
@@ -16,19 +17,12 @@ protected:
 public:
     Person();
     Person(const std::string& name, int age);
-    Person(const Person& other);
-    Person(Person&& other) noexcept;
     virtual ~Person();
 
-    void setName(const std::string& name);
-    std::string getName() const;
-
-    void setAge(int age);
-    int getAge() const;
-
     virtual void display() const;
+    virtual std::string getRole() const;
+    virtual void sayHello() const = 0;
 };
-
 
 
 
