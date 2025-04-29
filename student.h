@@ -5,7 +5,6 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#pragma once
 #include "Person.h"
 #include "Printable.h"
 
