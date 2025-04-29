@@ -5,29 +5,22 @@
 #ifndef STUDENT_H
 #define STUDENT_H
 
-#include <string>
-#include <iostream>
+#pragma once
 #include "Person.h"
+#include "Printable.h"
 
-class Student : public Person {
+class Student : public Person, public Printable {
 private:
     std::string studentID;
 
 public:
     Student();
     Student(const std::string& name, int age, const std::string& id);
-    Student(const Student& other);
-    Student(Student&& other) noexcept;
-    ~Student();
-
-    void setStudentID(const std::string& id);
-    std::string getStudentID() const;
 
     void display() const override;
-
-    friend std::ostream& operator<<(std::ostream& os, const Student& student);
-    friend std::istream& operator>>(std::istream& is, Student& student);
+    std::string getRole() const override;
+    void sayHello() const override;
+    void printDetails() const override;
 };
-
 
 #endif
