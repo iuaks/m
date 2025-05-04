@@ -12,16 +12,14 @@ class Person {
 protected:
     std::string name;
     int age;
-
 public:
-    Person();
-    Person(const std::string& name, int age);
+    Person(const std::string& name, int age); // <== ДОДАЙ ЦЕ
     virtual ~Person();
 
-    virtual void display() const;
-    virtual std::string getRole() const;
-    virtual void sayHello() const = 0;
-};
+    std::string getName() const;
+    int getAge() const;
 
+    virtual void display() const = 0;
+};
 
 #endif //PERSON_H

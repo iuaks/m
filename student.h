@@ -6,20 +6,15 @@
 #define STUDENT_H
 
 #include "Person.h"
-#include "Printable.h"
 
-class Student : public Person, public Printable {
-private:
+class Student : public Person {
     std::string studentID;
-
 public:
-    Student();
     Student(const std::string& name, int age, const std::string& id);
 
     void display() const override;
-    std::string getRole() const override;
-    void sayHello() const override;
-    void printDetails() const override;
+    std::string getID() const;
+    void printDetails() const; // <== ДОДАЙ ЦЕ
 };
 
 #endif
