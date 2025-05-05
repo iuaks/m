@@ -14,7 +14,3 @@ void Teacher::display() const {
 std::string Teacher::getSubject() const {
     return subject;
 }
-
-void Teacher::printDetails() const {
-    display();
-}

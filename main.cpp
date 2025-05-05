@@ -50,23 +50,6 @@ bool isValidName(const std::string& name) {
     });
 }
 
-int inputValidatedAge() {
-    std::string input;
-    int age = -1;
-    while (true) {
-        std::cout << "Enter age: ";
-        std::getline(std::cin, input);
-        try {
-            age = std::stoi(input);
-            if (age > 0) break;
-            else std::cout << "Age must be positive.\n";
-        } catch (...) {
-            std::cout << "Invalid input. Please enter a number.\n";
-        }
-    }
-    return age;
-}
-
 std::string inputValidatedString(const std::string& prompt) {
     std::string input;
     while (true) {
@@ -87,6 +70,24 @@ std::string inputValidatedName(const std::string& prompt) {
         std::cout << "Invalid name. Only letters and spaces allowed.\n";
     }
     return name;
+}
+
+
+int inputValidatedAge() {
+    std::string input;
+    int age = -1;
+    while (true) {
+        std::cout << "Enter age: ";
+        std::getline(std::cin, input);
+        try {
+            age = std::stoi(input);
+            if (age > 0) break;
+            else std::cout << "Age must be positive.\n";
+        } catch (...) {
+            std::cout << "Invalid input. Please enter a number.\n";
+        }
+    }
+    return age;
 }
 
 void adminMenu(std::vector<std::shared_ptr<Person>>& people) {

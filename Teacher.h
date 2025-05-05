@@ -14,6 +14,5 @@ public:
 
     void display() const override;
     std::string getSubject() const;
-    void printDetails() const;
 };
 #endif //TEACHER_H

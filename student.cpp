@@ -15,7 +15,3 @@ void Student::display() const {
 std::string Student::getID() const {
     return studentID;
 }
-
-void Student::printDetails() const {
-    display();
-}

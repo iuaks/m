@@ -14,7 +14,6 @@ public:
 
     void display() const override;
     std::string getID() const;
-    void printDetails() const; // <== ДОДАЙ ЦЕ
 };
 
 #endif
