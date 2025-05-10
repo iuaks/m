@@ -1,3 +1,2 @@
-Student,Maksim,17,1
-Teacher,Ivan,44,IT
-Student,Stepan,18,11
+Student Maksim 17 11
+Teacher Stepan 44 PE

@@ -4,38 +4,30 @@
 #include <fstream>
 #include <algorithm>
 #include <string>
-#include <sstream>
 #include "Student.h"
 #include "Teacher.h"
+#include <limits>
 
 const std::string DATA_FILE = "data.txt";
 const std::string ADMIN_PASSWORD = "admin123";
 
 void saveToFile(const std::vector<std::shared_ptr<Person>>& people) {
     std::ofstream out(DATA_FILE);
-    for (const auto& p : people) {
+       for (const auto& p : people) {
         if (auto s = dynamic_cast<Student*>(p.get())) {
-            out << "Student," << s->getName() << "," << s->getAge() << "," << s->getID() << "\n";
+            out << "Student " << s->getName() << " " << s->getAge() << " " << s->getID() << "\n";
         } else if (auto t = dynamic_cast<Teacher*>(p.get())) {
-            out << "Teacher," << t->getName() << "," << t->getAge() << "," << t->getSubject() << "\n";
+            out << "Teacher " << t->getName() << " " << t->getAge() << " " << t->getSubject() << "\n";
         }
     }
 }
 
 void loadFromFile(std::vector<std::shared_ptr<Person>>& people) {
     std::ifstream in(DATA_FILE);
-    std::string line;
-    while (getline(in, line)) {
-        std::istringstream ss(line);
-        std::string type, name, extra, ageStr;
+    std::string type, name, extra;
+    int age;
 
-        getline(ss, type, ',');
-        getline(ss, name, ',');
-        getline(ss, ageStr, ',');
-        getline(ss, extra);
-
-        int age = std::stoi(ageStr);
-
+    while (in >> type >> name >> age >> extra) {
         if (type == "Student") {
             people.push_back(std::make_shared<Student>(name, age, extra));
         } else if (type == "Teacher") {
@@ -90,12 +82,22 @@ int inputValidatedAge() {
     return age;
 }
 
+
 void adminMenu(std::vector<std::shared_ptr<Person>>& people) {
     int choice;
+
     do {
         std::cout << "\n1. Add Student\n2. Add Teacher\n3. Show All\n4. Save & Exit\n> ";
-        std::cin >> choice;
+
+        if (!(std::cin >> choice)) {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cout << "Invalid input.\n";
+            continue;
+        }
+
         std::cin.ignore();
+
         if (choice == 1) {
             std::string name = inputValidatedName("Enter student name: ");
             int age = inputValidatedAge();
@@ -108,10 +110,15 @@ void adminMenu(std::vector<std::shared_ptr<Person>>& people) {
             people.push_back(std::make_shared<Teacher>(name, age, subject));
         } else if (choice == 3) {
             for (const auto& p : people) p->display();
+        } else if (choice != 4) {
+            std::cout << "Invalid input.\n";
         }
+
     } while (choice != 4);
+
     saveToFile(people);
 }
+
 
 
 void userMenu(const std::vector<std::shared_ptr<Person>>& people) {
